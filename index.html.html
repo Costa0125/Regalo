@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Para alguien especial ✨</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root{
+  --pink:#ffb7d2;
+  --pink2:#ffd9e6;
+  --lav:#b9b2ff;
+  --white:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.68);
+}
+*{box-sizing:border-box}
+html,body{
+  margin:0;width:100%;height:100%;overflow:hidden;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+body{
+  display:flex;align-items:center;justify-content:center;
+  color:white;
+  background:
+    radial-gradient(circle at 15% 12%,rgba(255,148,195,.18),transparent 28%),
+    radial-gradient(circle at 87% 82%,rgba(117,105,255,.20),transparent 30%),
+    radial-gradient(circle at 50% 50%,rgba(105,73,146,.12),transparent 45%),
+    linear-gradient(135deg,#080916 0%,#140c24 48%,#090d1e 100%);
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;
+  background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.025) 50%,transparent 70%);
+  animation:sheen 9s ease-in-out infinite;
+}
+@keyframes sheen{50%{transform:translateX(8%);opacity:.7}}
+
+.sky{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+.star{
+  position:absolute;width:2px;height:2px;border-radius:50%;
+  background:#fff;opacity:.35;
+  box-shadow:0 0 7px rgba(255,255,255,.65);
+  animation:twinkle 2.8s infinite ease-in-out;
+}
+.star.big{width:3px;height:3px}
+@keyframes twinkle{50%{opacity:.08;transform:scale(.45)}}
+
+.orb{
+  position:absolute;border-radius:50%;pointer-events:none;
+  filter:blur(2px);opacity:.22;mix-blend-mode:screen;
+  animation:float 11s ease-in-out infinite;
+}
+.orb.one{width:260px;height:260px;background:#ff82b8;left:-120px;top:2%}
+.orb.two{width:310px;height:310px;background:#726cff;right:-140px;bottom:-40px;animation-delay:-4s}
+.orb:after{
+  content:"";position:absolute;inset:20%;
+  border:1px solid rgba(255,255,255,.08);border-radius:50%;
+}
+@keyframes float{50%{transform:translate(20px,-25px) scale(1.04)}}
+
+.wrap{
+  width:min(92vw,450px);
+  height:min(670px,88vh);
+  position:relative;z-index:2;
+}
+.card{
+  position:relative;width:100%;height:100%;
+  padding:34px 28px 25px;text-align:center;overflow:hidden;
+  border-radius:34px;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.045)),
+    rgba(12,10,28,.55);
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:
+    0 35px 90px rgba(0,0,0,.48),
+    inset 0 1px rgba(255,255,255,.12),
+    inset 0 -1px rgba(255,255,255,.03);
+  backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);
+  animation:appear .9s cubic-bezier(.2,.8,.2,1);
+}
+.card:before{
+  content:"";position:absolute;inset:1px;border-radius:33px;pointer-events:none;
+  background:linear-gradient(135deg,rgba(255,255,255,.09),transparent 25%,transparent 75%,rgba(255,183,210,.05));
+}
+@keyframes appear{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+
+.mini{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:9px;
+  padding:7px 13px;border-radius:999px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(255,255,255,.08);
+  font-size:10px;letter-spacing:2.6px;text-transform:uppercase;
+  color:rgba(255,255,255,.55);
+}
+.mini:before,.mini:after{content:"✦";font-size:7px;color:var(--pink)}
+
+h1{
+  position:relative;z-index:1;
+  margin:20px 0 12px;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:clamp(42px,10vw,56px);
+  line-height:.94;font-weight:600;letter-spacing:-1px;
+  text-shadow:0 8px 35px rgba(255,174,207,.12);
+}
+.accent{
+  color:var(--pink2);
+  text-shadow:0 0 28px rgba(255,145,190,.25);
+}
+.line{
+  position:relative;z-index:1;
+  width:78px;height:1px;margin:20px auto 22px;
+  background:linear-gradient(90deg,transparent,var(--pink),transparent);
+}
+.line:after{
+  content:"✦";position:absolute;left:50%;top:50%;
+  transform:translate(-50%,-55%);
+  padding:0 8px;background:#171029;color:var(--pink);font-size:9px;
+}
+
+.main-text{
+  position:relative;z-index:1;
+  margin:0 auto;max-width:350px;
+  color:var(--muted);font-size:15px;line-height:1.8;
+  letter-spacing:.1px;
+}
+.message{
+  position:relative;z-index:1;
+  margin:24px auto 0;padding:19px 20px;
+  max-width:360px;border-radius:23px;
+  background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.035));
+  border:1px solid rgba(255,255,255,.095);
+  box-shadow:inset 0 1px rgba(255,255,255,.05),0 15px 35px rgba(0,0,0,.12);
+  color:rgba(255,255,255,.86);
+  font-size:14px;line-height:1.75;
+}
+.heart{
+  display:inline-block;color:#ffb4d0;
+  text-shadow:0 0 15px rgba(255,126,180,.5);
+  animation:pulse 1.7s infinite;
+}
+@keyframes pulse{50%{transform:scale(1.17)}}
+
+button{
+  position:absolute;left:50%;bottom:58px;z-index:5;
+  transform:translateX(-50%);
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:999px;padding:14px 25px;
+  color:#2a1627;background:linear-gradient(135deg,#ffd8e5,#ffb9d2);
+  font:600 14px Inter,sans-serif;letter-spacing:.1px;
+  cursor:pointer;
+  box-shadow:0 12px 32px rgba(255,135,183,.18),inset 0 1px rgba(255,255,255,.65);
+  transition:.25s ease;
+}
+button:hover{transform:translateX(-50%) translateY(-3px);box-shadow:0 17px 40px rgba(255,135,183,.25)}
+button:active{transform:translateX(-50%) scale(.95)}
+
+.footer{
+  position:absolute;bottom:22px;left:0;width:100%;
+  color:rgba(255,255,255,.3);font-size:10px;letter-spacing:.5px;
+}
+
+/* SECOND SCREEN */
+.secret{
+  position:absolute;left:11px;right:11px;top:11px;bottom:11px;
+  z-index:10;display:flex;align-items:center;justify-content:center;
+  padding:20px;border-radius:29px;overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 16%,rgba(255,183,210,.18),transparent 27%),
+    radial-gradient(circle at 20% 85%,rgba(130,120,255,.16),transparent 30%),
+    linear-gradient(145deg,#110d25,#241331 52%,#0d1125);
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 25px 75px rgba(0,0,0,.62),inset 0 1px rgba(255,255,255,.1);
+  opacity:0;visibility:hidden;transform:scale(.88) rotate(-1deg);
+  pointer-events:none;
+  transition:opacity .45s ease,transform .55s cubic-bezier(.2,.8,.2,1),visibility .45s;
+}
+.secret.show{opacity:1;visibility:visible;transform:scale(1) rotate(0);pointer-events:auto}
+
+.secret:after{
+  content:"";position:absolute;inset:-50%;
+  background:conic-gradient(from 0deg,transparent,rgba(255,183,210,.07),transparent 30%);
+  animation:rotateGlow 12s linear infinite;
+}
+@keyframes rotateGlow{to{transform:rotate(360deg)}}
+
+.secret-stars{
+  position:absolute;inset:0;opacity:.38;
+  background-image:
+    radial-gradient(circle,rgba(255,255,255,.9) 0 1px,transparent 1.5px),
+    radial-gradient(circle,rgba(255,190,220,.7) 0 1px,transparent 1.5px);
+  background-size:59px 67px,87px 91px;
+  animation:starDrift 18s linear infinite;
+}
+@keyframes starDrift{to{background-position:80px 90px,-50px -60px}}
+
+.secret-glow{
+  position:absolute;width:250px;height:250px;border-radius:50%;
+  background:rgba(255,118,181,.14);filter:blur(45px);
+  top:-100px;left:50%;transform:translateX(-50%);
+  animation:glowPulse 4s ease-in-out infinite;
+}
+@keyframes glowPulse{50%{transform:translateX(-50%) scale(1.28);opacity:.65}}
+
+.letter{
+  position:relative;z-index:4;width:min(100%,355px);
+  padding:29px 25px 25px;border-radius:27px;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.04)),
+    rgba(15,11,29,.58);
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 25px 55px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.1);
+  backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px);
+  text-align:center;transform:translateY(22px);opacity:0;
+  transition:opacity .7s ease .1s,transform .7s cubic-bezier(.2,.8,.2,1) .1s;
+}
+.secret.reveal .letter{opacity:1;transform:none}
+.letter-top{
+  font-size:9px;letter-spacing:2.8px;text-transform:uppercase;
+  color:rgba(255,255,255,.42);margin-bottom:15px;
+}
+.big-heart{
+  position:relative;width:72px;height:72px;margin:0 auto 16px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;color:#ffd9e7;font-size:32px;
+  background:radial-gradient(circle,rgba(255,166,201,.24),rgba(255,166,201,.025));
+  border:1px solid rgba(255,190,215,.2);
+  box-shadow:0 0 45px rgba(255,130,185,.16),inset 0 1px rgba(255,255,255,.14);
+  animation:heartBeat 2s ease-in-out infinite;
+}
+.big-heart:before,.big-heart:after{
+  content:"";position:absolute;border-radius:50%;
+  border:1px solid rgba(255,190,215,.13);
+}
+.big-heart:before{inset:-9px;animation:ring 2.8s infinite}
+.big-heart:after{inset:-18px;opacity:.45;animation:ring 2.8s .5s infinite}
+@keyframes heartBeat{45%{transform:scale(1.08)}55%{transform:scale(1)}}
+@keyframes ring{50%{transform:scale(1.08);opacity:.15}}
+
+.secret-title{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:27px;line-height:1.05;font-weight:600;
+  color:#fff;margin-bottom:17px;
+}
+.letter p{
+  margin:0 auto 15px;max-width:285px;
+  color:rgba(255,255,255,.83);font-size:14px;line-height:1.75;
+}
+.letter .small-note{
+  color:rgba(255,255,255,.59);font-size:12px;
+}
+.signature{
+  margin-top:19px;color:var(--pink);
+  font-size:17px;text-shadow:0 0 18px rgba(255,145,190,.3);
+}
+.floating-heart{
+  position:absolute;z-index:3;color:rgba(255,183,211,.4);
+  font-size:26px;animation:floatHeart 4.5s ease-in-out infinite;
+}
+.heart-a{left:8%;top:17%}
+.heart-b{right:8%;bottom:19%;font-size:19px;animation-delay:-1.7s}
+@keyframes floatHeart{50%{transform:translateY(-17px) rotate(9deg);opacity:.72}}
+
+.close-secret{
+  position:absolute;z-index:7;top:14px;right:14px;
+  width:36px;height:36px;padding:0;margin:0;
+  border-radius:50%;border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.065);color:rgba(255,255,255,.72);
+  font-size:22px;line-height:32px;box-shadow:none;transform:none;
+}
+.close-secret:hover{transform:rotate(90deg);background:rgba(255,255,255,.13)}
+.close-secret:active{transform:scale(.9)}
+
+.spark{
+  position:fixed;pointer-events:none;font-size:18px;
+  animation:rise 1.6s ease-out forwards;z-index:30;
+}
+@keyframes rise{to{transform:translateY(-125px) scale(.2) rotate(25deg);opacity:0}}
+
+@media(max-height:600px){
+  .wrap{height:92vh}
+  .card{padding-top:22px}
+  h1{margin:14px 0 9px;font-size:42px}
+  .line{margin:14px auto 16px}
+  .message{margin-top:15px;padding:14px}
+  button{bottom:48px}
+  .footer{bottom:14px}
+  .secret{top:8px;bottom:8px}
+  .letter{padding:20px 18px}
+  .big-heart{width:58px;height:58px;font-size:27px;margin-bottom:10px}
+  .secret-title{font-size:24px}
+  .letter p{font-size:12px;margin-bottom:10px}
+}
+@media(max-width:360px){
+  .card{padding-left:20px;padding-right:20px}
+  .message{font-size:13px}
+  .secret{padding:13px}
+  .letter{padding:19px 15px}
+}
+</style>
+</head>
+<body>
+
+<div class="sky" id="sky">
+  <div class="orb one"></div>
+  <div class="orb two"></div>
+</div>
+
+<main class="wrap">
+  <section class="card">
+
+    <div class="mini">solo porque sí ✦</div>
+
+    <h1>Para alguien <span class="accent">especial</span></h1>
+
+    <div class="line"></div>
+
+    <p class="main-text">
+      No hace falta una fecha especial para decirle a alguien
+      que la quieres.
+    </p>
+
+    <div class="message">
+      Me gusta coincidir contigo, hablar contigo y esos pequeños
+      momentos que, sin hacer mucho ruido, terminan alegrando el día.
+      <br><br>
+      Así que… esto es solo un pequeño recordatorio de que
+      <span class="heart">♥</span> me importas.
+    </div>
+
+    <!-- ESTA CAPA APARECE ENCIMA, SIN MOVER EL CONTENIDO -->
+    <div class="secret" id="secret">
+      <div class="secret-stars"></div>
+      <div class="secret-glow"></div>
+      <div class="floating-heart heart-a">♡</div>
+      <div class="floating-heart heart-b">♥</div>
+      <div class="letter">
+        <div class="letter-top">una pequeña nota para ti</div>
+        <div class="big-heart">♥</div>
+        <div class="secret-title">Solo quería decirte algo...</div>
+        <p>
+          Y si alguna vez dudas de lo especial que eres para mí,
+          vuelve aquí.
+        </p>
+        <p class="small-note">
+          No prometo tener las palabras perfectas,<br>
+          pero sí un cariño bastante sincero. :)
+        </p>
+        <div class="signature">♥</div>
+      </div>
+      <button type="button" class="close-secret" id="closeSecret" aria-label="Cerrar">×</button>
+    </div>
+
+    <button type="button" id="btn">Hay algo más ✨</button>
+
+    <div class="footer">hecho con un poquito de cariño</div>
+
+  </section>
+</main>
+
+<script>
+(function(){
+  const sky=document.getElementById("sky");
+  const btn=document.getElementById("btn");
+  const secret=document.getElementById("secret");
+
+  for(let i=0;i<65;i++){
+    const s=document.createElement("span");
+    s.className="star" + (i % 11 === 0 ? " big" : "");
+    s.style.left=Math.random()*100+"%";
+    s.style.top=Math.random()*100+"%";
+    s.style.animationDelay=Math.random()*3+"s";
+    s.style.animationDuration=(1.7+Math.random()*3)+"s";
+    sky.appendChild(s);
+  }
+
+  const closeSecret=document.getElementById("closeSecret");
+
+  btn.onclick=function(){
+    secret.classList.add("show");
+    btn.textContent="Hay algo más ✨";
+    burst();
+    setTimeout(function(){
+      secret.classList.add("reveal");
+    },120);
+  };
+
+  closeSecret.onclick=function(){
+    secret.classList.remove("reveal");
+    secret.classList.remove("show");
+  };
+
+  function burst(){
+    for(let i=0;i<14;i++){
+      const e=document.createElement("span");
+      e.className="spark";
+      e.textContent=["♥","✦","♡","·"][Math.floor(Math.random()*4)];
+      e.style.left=(42+Math.random()*16)+"%";
+      e.style.top=(58+Math.random()*10)+"%";
+      e.style.animationDelay=Math.random()*.25+"s";
+      document.body.appendChild(e);
+      setTimeout(()=>e.remove(),1800);
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
